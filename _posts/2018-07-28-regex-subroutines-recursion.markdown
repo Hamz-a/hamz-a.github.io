@@ -8,7 +8,7 @@ tags: regex
 
 ## Introduction
 
-Subroutines and recursion are powerful expressions that are sometimes ignored or forgotten. Maybe because the number of languages that support it are relatively scarce? If you're using PCRE, PHP which uses PCRE under the hood, Perl or Python with the [`regex`][pythonregex] module then keep reading! In the end we'll try to write a complex regex for URLs!
+Subroutines and recursion are powerful expressions that are sometimes ignored or forgotten. Maybe because the number of languages that support it are relatively scarce? If you're using PCRE, PHP which uses PCRE under the hood, Perl or Python with the [`regex`][pythonregex] module then keep reading!
 
 
 ## Warmup
