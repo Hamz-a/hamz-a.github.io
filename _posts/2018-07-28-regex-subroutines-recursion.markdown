@@ -19,7 +19,7 @@ Let's warmup with backreferences. Say you want to match the following expression
 ([a-zA-Z0-9_]+) -> \1
 {% endhighlight %}
 
-Aside from the fact that this regex could be simplified to `(\w) -> \1`, the regex is pretty straightforward, we use a capturing group to match a word, then reference what we have matched with `\1`. 
+Aside from the fact that this regex could be simplified to `(\w+) -> \1`, the regex is pretty straightforward, we use a capturing group to match a word, then reference what we have matched with `\1`. 
 
 {% highlight text %}
 foo -> foo  [ match ]
