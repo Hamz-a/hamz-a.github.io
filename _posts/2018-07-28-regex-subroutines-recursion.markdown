@@ -13,7 +13,7 @@ Subroutines and recursion are powerful expressions that are sometimes ignored or
 
 ## Warmup
 
-Let's warmup with backreferences. Say you want to match the following expression `word -> word` where the left and right side are the same words. You'll usually end up using backrefences:
+Let's warmup with backreferences. Say you want to match the following expression `word -> word` where the left and right side are the same words. You'll usually end up using backreferences:
 
 {% highlight text %}
 ([a-zA-Z0-9_]+) -> \1
@@ -45,7 +45,7 @@ Good so far but we can do better. With subroutines we can reuse defined groups:
 ([a-zA-Z0-9_]+) -> (?1)
 {% endhighlight %}
 
-The expression above matches a word, puts it in group #1, then reuses the expression in group 1 with `(?1)`. The results: 
+The expression above matches a word, puts it in group #1, then reuses the expression in group #1 with `(?1)`. The results: 
 
 {% highlight text %}
 foo -> foo  [ match ]
@@ -54,8 +54,8 @@ qux -> baz  [ match ]
 baz qux     [ won't match ]
 {% endhighlight %}
 
-There are difference variations of subroutines:
-- `(?1)` will call group #1, effectively if you have group 2 you can also use `(?2)` and so on.
+There are different variations of subroutines:
+- `(?1)` will call group #1, effectively if you have group #2 you can also use `(?2)` and so on.
 - `(?+1)` will call the next group. Using our example above, we could rewrite it as: `(?+1) -> ([a-zA-Z0-9_]+)`. Of course, using `(?+2)` is also possible if the second next group exists and so on.
 - `(?-1)` same as above but will call the previous group. Using our example above, we could rewrite is as: `([a-zA-Z0-9_]+) -> (?-1)`.
 - `(?&name)` also known as named subroutines. Using our example above, we could rewrite is as: `(?P<word>[a-zA-Z0-9_]+) -> (?&word)`.
@@ -63,7 +63,7 @@ There are difference variations of subroutines:
 
 ## Realword subroutine example
 
-Say we want to match [UUID][uuidwiki]'s. UUID's are 32 hexadecimal characters separated by hyphens following the following pattern: `8-4-4-4-12`. The vanilla regex pattern would look like this:
+Say we want to match [UUID][uuidwiki]'s. UUID's are 32 hexadecimal characters separated by hyphens adhering the following pattern: `8-4-4-4-12`. The vanilla regex pattern would look like this:
 
 {% highlight text %}
 [a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}
@@ -160,7 +160,7 @@ Basically we can put all kinds of patterns inside the DEFINE area and use it lat
 
 ## Combining everything in the real world
 
-Say we have a developed our own syntax which resembles JSON in some sense:
+Say we have developed our own syntax which resembles JSON in some sense:
 
 {% highlight text %}
 {
@@ -188,7 +188,7 @@ The above regex can be found online on [regex101][regex101], an awesome online r
 
 This [StackOverflow thread][sojsonregex] took it to the next level by validating JSON entirely with regex.
 
-The techniques described here are probably useful, but in general you either want to use a full-fledged parser or use one of the standard libraries of your programming environment. For example, to validate JSON strings, you could load it with your favourite function/library. It will probably throw an exception if it's invalid :\_)
+The techniques described here are probably useful, but in general you either want to use a full-fledged parser or use one of the standard libraries of your programming environment. For example, to validate JSON strings, you could load it with your favorite function/library. It will probably throw an exception if it's invalid :\_)
 
 
 [pythonregex]: https://pypi.org/project/regex/
