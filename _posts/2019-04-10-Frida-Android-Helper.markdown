@@ -48,7 +48,7 @@ def launch_frida_server(device: Device):
     perform_cmd(device, "/data/local/tmp/frida-server && sleep 2147483647 &", root=True, timeout=1)
 ```
 
-The frida-server needs to be launched as root and put in the background. I've hacked around with fork `&`, double fork `(./frida-server &) &`, nohup, `su -c` etc...
+The frida-server needs to be launched as root and put in the background. I've hacked around with fork `&`, double fork `(./frida-server &) &`, `nohup`, `setsid`, `su -c` etc...
 Either the frida server exits directly, or the command line "hangs" since TTY (socket?) is still open. Therefore the hack consists of running frida-server as root, sleeping infinitely, putting this into the background and then abruptly closing the connection from client side using `timeout=1`. The python ADB library throws a timeout exception which is caught in `perform_cmd()`. Ideas for a cleaner solution are welcome!
 
 Hopefully I'll add more modules to make the Frida experience on Android smoother. Ideas and bug reports are therefore welcome!
