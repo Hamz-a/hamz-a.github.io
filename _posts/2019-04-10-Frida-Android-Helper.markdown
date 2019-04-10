@@ -27,8 +27,8 @@ Installing the latest Frida is easy as described in the documentation:
 3. `chmod 755` it.
 4. Run as root in background.
 
-After a few times of doing this I thought: why not automate this process? Enter Frida Android Helper.
-The command line tool is written in Python and makes use of [`pure-python-adb`][pure-python-adb] to interface with the ADB server.
+After a few times of doing this I thought: why not automate this process? Enter [Frida Android Helper][frida-android-helper].
+A command line tool written in Python and makes use of [`pure-python-adb`][pure-python-adb] to interface with the ADB server.
 
 For starters I've added a server module to start, stop, reboot and most importantly update the Frida server to the latest release.
 The GitHub API is used to fetch the latest Android Frida server based on the architecture of the device (arm/x86 32/64).
@@ -57,4 +57,5 @@ Hopefully I'll add more modules to make the Frida experience on Android smoother
 
 [frida]: https://www.frida.re/
 [frida-latest-release]: https://github.com/frida/frida/releases/latest
+[frida-android-helper]: https://github.com/Hamz-a/frida-android-helper
 [pure-python-adb]: https://github.com/Swind/pure-python-adb/
