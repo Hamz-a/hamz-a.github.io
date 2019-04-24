@@ -94,6 +94,8 @@ Next we need to figure out the arguments passed to `ioctl`. Looking at the code 
 2. `args[1]`: An integer representing a certain command. We need to target a specific one `BINDER_WRITE_READ`. In [`binder.h#106`][binder.h-L106] this is defined as `#define BINDER_WRITE_READ _IOWR('b', 1, struct binder_write_read)`. I decided to create a sample C++ file to calculate this value: `0xc0306201`.
 3. `args[2]`: A pointer pointing to a `binder_write_read` struct (data). We will need to parse this struct.
 
+The following implements above mentioned flow:
+
 ```javascript
 Java.perform(function(){
     var ioctl = Module.findExportByName("libbinder.so", "ioctl");
