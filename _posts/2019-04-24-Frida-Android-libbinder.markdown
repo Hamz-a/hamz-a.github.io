@@ -13,7 +13,7 @@ Sounds like a cool thing to hook using Frida! In this blogpost I'll describe my 
 
 ## Finding suitable function to hook
 Most of the times there are several functions that reside on different layers that can be hooked in order to achieve a certain goal. The following resources were a great help into understanding the Android Binder architecture and the layers it contains <sup>[1][synacktiv-binder]</sup> <sup>[2][newandroidbook-binder]</sup> <sup>[3][blackhat-ipc-paper]</sup>. The following are a rough list of entries that can be hooked, sorted from high to low level:
-1. Java implementation layer: developer might implement a custom protocol to communicate between apps/services. Here we're going to hook implementation specific functions created by app developers.
+1. Java implementation layer: a developer might implement a custom protocol to communicate between apps/services. Here we're going to hook implementation specific functions created by app developers.
 2. Framework layer: this layer represents the Android standard Java classes/interfaces which developers might extend. A potential hook candidate would be `android.os.Binder`.
 3. Native layer: this layer is hidden from app developers and provided transparently by Android. It is implemented as shared library [libbinder.so][libbinder-cpp]. Particular files of interest are `Binder.cpp` and `IPCThreadState.cpp`. This layer communicates with the Kernel layer using `ioctl` syscalls in order to communicate binder messages.
 4. Kernel layer: `ioctl` syscalls are handled here.
@@ -91,7 +91,7 @@ Java.perform(function(){
 
 Next we need to figure out the arguments passed to `ioctl`. Looking at the code in [IPCThreadState.cpp#905][IPCThreadState.cpp-L905] we can deduce that there are three arguments:
 1. `args[0]`: An integer representing a file descriptor.
-2. `args[1]`: An integer representing a certain command. We need to target a specific one `BINDER_WRITE_READ`. In `binder.h#106`[binder.h-L106] this is defined as `#define BINDER_WRITE_READ _IOWR('b', 1, struct binder_write_read)`. I decided to create a sample C++ file to calculate this value: `0xc0306201`.
+2. `args[1]`: An integer representing a certain command. We need to target a specific one `BINDER_WRITE_READ`. In [`binder.h#106`][binder.h-L106] this is defined as `#define BINDER_WRITE_READ _IOWR('b', 1, struct binder_write_read)`. I decided to create a sample C++ file to calculate this value: `0xc0306201`.
 3. `args[2]`: A pointer pointing to a `binder_write_read` struct (data). We will need to parse this struct.
 
 ```javascript
