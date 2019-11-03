@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android Frida hooking: disabling FLAG_SECURE"
-date: 2019-11-03 22:00:00 +0200
+date: 2019-11-03 17:30:00 +0200
 tags: frida android flag secure
 --- 
 
