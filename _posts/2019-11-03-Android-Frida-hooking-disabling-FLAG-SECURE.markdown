@@ -76,7 +76,7 @@ In Frida, this looks as follows:
 ```
 
 1. In (3) we define a `FLAG_SECURE` variable, this flag is a constant and can be found in the documentation (2).
-2. In (4) we create a bridge to interface with the `Window` Android class
+2. In (4) we create a bridge to interface with the `Window` Android class.
 3. In (5) we create a bridgee to interface with the `setFlags` method. Note that if this method had several overloads, it would have been necessary to specify which overload to choose by using `var setFlags = Window.setFlags.overload("int", "int");`. In this case, since there's only one method called `setFlags` in the `Window` class, it is not nessecary.
 4. In (7) we hook the `setFlags` method with our own implementation.
 5. In (9) we modify the `flags` variable by substracting the `FLAG_SECURE` flag. These are basic bitwise operations in one line.
