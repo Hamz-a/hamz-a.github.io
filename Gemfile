@@ -25,3 +25,5 @@ gem "github-pages", group: :jekyll_plugins
 #   gem "jekyll-feed", "~> 0.6"
 # end
 
+# https://github.com/jekyll/jekyll/issues/8523
+gem "webrick"
