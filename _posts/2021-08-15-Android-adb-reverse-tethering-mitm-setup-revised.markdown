@@ -44,7 +44,7 @@ iptables -t nat -F   # flush current rules
 iptables -t nat -A OUTPUT -p tcp --dport 80 -j DNAT --to-destination 127.0.0.1:8844
 iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 127.0.0.1:8844
 iptables -t nat -A POSTROUTING -p tcp --dport 80 -j MASQUERADE 
-iptables -t nat -A POSTROUTING -p tcp --dport 443 -j MASQUERADE)
+iptables -t nat -A POSTROUTING -p tcp --dport 443 -j MASQUERADE
 ```
 ⚠️ if you suspect that your target app performs requests on other ports than 80 and 443, adjust above commands accordingly.
 
