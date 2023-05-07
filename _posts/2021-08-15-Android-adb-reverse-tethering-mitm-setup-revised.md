@@ -3,6 +3,7 @@ layout: post
 title: "Android adb reverse tethering mitm setup revised"
 date: 2021-08-15 18:00:00 +0200
 tags: adb android tricks reverse tethering
+categories: blogpost
 --- 
 
 ## Introduction

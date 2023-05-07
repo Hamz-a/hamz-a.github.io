@@ -4,6 +4,7 @@ title: "Android Frida hooking: disabling FLAG_SECURE"
 date: 2019-11-03 17:30:00 +0200
 tags: frida android flag secure
 categories: frida android flag secure
+categories: blogpost
 --- 
 
 ## Introduction

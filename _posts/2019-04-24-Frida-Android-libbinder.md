@@ -3,6 +3,7 @@ layout: post
 title: "Frida Android libbinder"
 date: 2019-04-24 21:45:00 +0200
 tags: frida android libbinder
+categories: blogpost
 ---
 
 ## Introduction

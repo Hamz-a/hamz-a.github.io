@@ -5,7 +5,7 @@ layout: page
 {{ content }}
 
 <ul class="taxonomy-index">
-  {% assign postsInYear = site.posts | where: 'categories', 'blogpost' | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+  {% assign postsInYear = site.posts | where: 'categories', 'thought' | group_by_exp: 'post', 'post.date | date: "%Y"' %}
   {% for year in postsInYear %}
     <li>
       <a href="#{{ year.name }}">
@@ -15,7 +15,7 @@ layout: page
   {% endfor %}
 </ul>
 
-{% assign postsByYear = site.posts | where: 'categories', 'blogpost' | group_by_exp: 'post', 'post.date | date: "%Y"' %}
+{% assign postsByYear = site.posts | where: 'categories', 'thought' | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
   <section id="{{ year.name }}" class="taxonomy-section">
     <h2 class="taxonomy-title">{{ year.name }}</h2>

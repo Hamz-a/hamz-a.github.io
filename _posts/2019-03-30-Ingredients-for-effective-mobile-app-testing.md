@@ -3,6 +3,7 @@ layout: post
 title: "Ingredients for effective mobile app testing"
 date: 2019-03-30 16:00:00 +0100
 tags: mobile security review
+categories: blogpost
 ---
 
 

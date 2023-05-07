@@ -79,10 +79,10 @@ plugins:
   - jekyll-paginate
 
 # Collections
-collections:
-  thoughts:
-    output: true
-    permalink: /:collection/:path/
+# collections:
+#   thoughts:
+#     output: true
+#     permalink: /:collection/:path/
 
 # Front Matter Defaults
 defaults:
@@ -97,7 +97,7 @@ defaults:
   # Thoughts defaults
   - scope:
       path: "_thoughts"
-      type: thoughts
+      type: posts
     values:
       layout: post
       comments: false

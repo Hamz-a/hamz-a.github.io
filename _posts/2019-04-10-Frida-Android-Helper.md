@@ -3,6 +3,7 @@ layout: post
 title: "Frida Android Helper"
 date: 2019-04-10 21:45:00 +0200
 tags: frida android adb python
+categories: blogpost
 ---
 
 One of my favorite tools for Android app security assessments is [frida][frida]. Frida is a cross platform dynamic instrumentation tool that can help with dynamic analysis of apps and bypass security mechanisms implemented in these apps.

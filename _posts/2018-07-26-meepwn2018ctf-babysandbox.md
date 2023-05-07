@@ -3,6 +3,7 @@ layout: post
 title:  "Meepwn 2018 CTF - babysandbox pwn challenge"
 date:   2018-07-26 19:00:00 +0200
 tags: ctf pwn sandbox escape shellcode
+categories: blogpost
 ---
 
 ## 0x00 Preface

@@ -3,6 +3,7 @@ layout: post
 title: "Automated Frida hook generation with JEB"
 date: 2019-10-06 23:00:00 +0200
 tags: frida android jeb
+categories: blogpost
 ---
 
 ## Introduction

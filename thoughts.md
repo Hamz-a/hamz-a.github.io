@@ -1,9 +1,7 @@
 ---
 title: Thoughts
-layout: collection
+layout: thoughts
 permalink: /thoughts/
-collection: thoughts
-entries_layout: grid
+show_excerpts: true
+entries_layout: list
 ---
-
-Loading thoughts...

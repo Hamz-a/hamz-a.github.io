@@ -3,6 +3,7 @@ layout: post
 title:  "Regex tricks"
 date:   2018-09-16 14:00:00 +0200
 tags: regex
+categories: blogpost
 ---
 
 Modern regex engines have some powerful features which are not used quite often. Maybe because regexes are considered cryptic and hard to begin with? In this blogpost I want to document a few of my favourite tricks.
