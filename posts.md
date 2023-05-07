@@ -1,5 +1,5 @@
 ---
-title: Post Archive
+title: Blog posts
 layout: posts
 permalink: /posts/
 show_excerpts: true
