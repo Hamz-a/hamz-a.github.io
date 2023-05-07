@@ -5,10 +5,6 @@ date:   2018-07-26 19:00:00 +0200
 tags: ctf pwn sandbox escape shellcode
 ---
 
-
-
-
-
 ## 0x00 Preface
 I participated with [Sec.SE CTF team][securityexchangeteam] at [Meepwn 2018 CTF][meepwn2018ctf]. I focussed mainly on the baby pwn challenge. Although I couldn't get the flag during the competition. I think I was close enough to write a blogpost about this.
 
