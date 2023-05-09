@@ -4,7 +4,7 @@
 ### Prerequisites
 - Docker Desktop
 #### Runtime only
-1. Run a container binding the project into its volume
+1. Run a container (download image from Docker hub)
 - macOS
 ```shell
 docker run --name bhamza.me -dp 4000:4000 --rm --platform linux/amd64 caddydz/hamz-a.github.io && open http://localhost
