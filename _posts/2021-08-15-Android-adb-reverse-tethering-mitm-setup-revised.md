@@ -64,7 +64,7 @@ I've automated above setup and commands in my [Frida Android Helper][fah_github]
 ![fah_rproxy][fah_rproxy]
 
 
-[previous_blog_post]: /2020/10/20/Android-adb-reverse-tethering-mitm-setup.html
+[previous_blog_post]: /blogpost/2020/10/20/Android-adb-reverse-tethering-mitm-setup.html
 [FSDominguez]: https://twitter.com/FSDominguez
 [gnirehtet]: https://github.com/Genymobile/gnirehtet
 [iptables]: https://linux.die.net/man/8/iptables
