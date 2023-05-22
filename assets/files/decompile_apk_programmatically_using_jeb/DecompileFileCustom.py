@@ -28,7 +28,7 @@ How to run (eg, on Windows):
 For additional details, refer to:
 https://www.pnfsoftware.com/jeb/manual/faq/#can-i-execute-a-jeb-python-script-from-the-command-line
 """
-class DecompileFile(IScript):
+class DecompileFileCustom(IScript):
 
   def run(self, ctx):
     print('Start decompilation...')
