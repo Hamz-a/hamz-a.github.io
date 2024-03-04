@@ -4,6 +4,7 @@ title: "Security assessing gRPC & gRPC-web services"
 date: 2024-03-04 9:00:00 +0200
 tags: grpc web burp extension
 categories: blogpost
+image: /assets/files/security_assessing_grpc_and_grpcweb_services/og_social.png
 --- 
 
 ## Introduction
