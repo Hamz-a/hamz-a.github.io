@@ -8,7 +8,7 @@ image: /assets/files/security_assessing_grpc_and_grpcweb_services/og_social.png
 --- 
 
 ## Introduction
-[gRPC][grpc] is increasingly getting more popular and as a result, it is encountered more often during security assessments. In this blog post, I explain the different approaches to security test gRPC services depending on the type of assessment. [At the end][theend], I will show how to extend the [blackboxprotobuf][blackboxprotobuf] Burp extension to support gRPC-web.
+[gRPC][grpc] is getting increasingly popular and as a result, it is encountered more often during security assessments. In this blog post, I explain the different approaches to security test gRPC services depending on the type of assessment. [At the end][theend], I will show how to extend the [blackboxprotobuf][blackboxprotobuf] Burp extension to support gRPC-web.
 
 ## gRPC 101
 gRPC is an open source high performance Remote Procedure Call (RPC) framework. It allows developers to write a service definition using Protocol Buffers. The following service definition is a simple example as demonstrated in the [gRPC documentation][grpc_doc_intro]:
@@ -42,7 +42,7 @@ As part of a security assessment, the auditor will try various ways to find secu
 
 
 #### White box
-During a white box security assessment, documentation and source code is shared with the auditor. This means that common tools can be used to interact with gRPC services. A good example is Postman, which since 2022, [supports gRPC][postman_grpc_support]. It is almost always advised to put an intercepting proxy such as [Burp Suite][burp_suite] in-between to keep a history of traffic. In addition, tools like Burp Suite allows for traffic modification and has a scala of offensive capabilities compared to Postman. A typical setup would look as follow:
+During a white box security assessment, documentation and source code is shared with the auditor. This means that common tools can be used to interact with gRPC services. A good example is Postman, which since 2022, [supports gRPC][postman_grpc_support]. It is almost always advised to put an intercepting proxy such as [Burp Suite][burp_suite] in-between to keep a history of traffic. In addition, tools like Burp Suite allows for traffic modification and has a myriad of offensive capabilities compared to Postman. A typical setup would look as follow:
 ![grpc_mitm_whitebox][grpc_mitm_whitebox]
 
 #### Grey box
@@ -85,7 +85,7 @@ Next is the `get_protobuf_data` function. BBPB retrieves by default the protobuf
 >
 > So in general it goes "marker" "4 bytes denoting length" "X bytes of data / trailer", and repeat.
 
-A simplified visual representation looks as follow:
+A simplified visual representation looks as follows:
 ![grpc_web_protocol][grpc_web_protocol]
 
 Implementing the above logic is straightforward in Python:
