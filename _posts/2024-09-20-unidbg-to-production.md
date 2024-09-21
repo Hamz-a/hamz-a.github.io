@@ -139,7 +139,7 @@ public class SignerController {
 Let's run it and test it out:
 ![runit][runit]
 
-A quick curl command to confirm its working!
+A quick curl command to confirm it is working!
 ```
 curl -H "Content-Type: application/json" --request POST --data '{"message":"hellosign"}' http://localhost:8080/sign
 
